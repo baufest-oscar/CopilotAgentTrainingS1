@@ -73,11 +73,17 @@ Once the application is running, visit:
 - [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed.
 - Alternatively, [Python 3.11+](https://www.python.org/) and [Poetry](https://python-poetry.org/) for local development.
 
+## Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `SECRET_KEY` | `supersecretkey_change_in_production` | Secret key used to sign JWT tokens. **Always override this in production.** |
+
 ## Running with Docker Compose
 
 ```bash
 cd backend
-docker compose up --build
+SECRET_KEY=your_strong_secret_here docker compose up --build
 ```
 
 The API will be available at `http://localhost:8000`.
