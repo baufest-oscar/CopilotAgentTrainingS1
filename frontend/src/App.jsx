@@ -3,6 +3,28 @@ import { CheckCircle2, Copy, KeyRound, LogIn, LogOut, RefreshCw, ShieldCheck } f
 import './App.css'
 
 const API_BASE_URL = '/api'
+const MICROSOFT_CERTIFICATIONS_2026 = [
+  {
+    title: 'Microsoft 365 Certified: Copilot and Agent Administration Fundamentals',
+    exam: 'AB-900',
+    link: 'https://learn.microsoft.com/en-us/certifications/microsoft-365-copilot-agent-administration-fundamentals/',
+  },
+  {
+    title: 'Microsoft Certified: Agentic AI Business Solutions Architect',
+    exam: 'AB-100',
+    link: 'https://learn.microsoft.com/en-us/certifications/agentic-ai-business-solutions-architect/',
+  },
+  {
+    title: 'Microsoft Certified: Azure AI App and Agent Developer',
+    exam: 'AI-103',
+    link: 'https://learn.microsoft.com/en-us/certifications/azure-ai-app-agent-developer/',
+  },
+  {
+    title: 'Microsoft Certified: Cloud and AI Security Engineer Associate',
+    exam: 'SC-500',
+    link: 'https://learn.microsoft.com/en-us/certifications/cloud-ai-security-engineer/',
+  },
+]
 
 function compactToken(token) {
   if (!token) return 'Sin token activo'
@@ -90,6 +112,20 @@ function App() {
           <span className={`status-dot ${status.type}`} />
           <span>{status.message}</span>
         </div>
+        <section className="certifications-panel" aria-label="Certificaciones Microsoft 2026">
+          <p className="certifications-title">Certificaciones Microsoft 2026</p>
+          <div className="certifications-grid">
+            {MICROSOFT_CERTIFICATIONS_2026.map((certification) => (
+              <article className="certification-card" key={certification.exam}>
+                <p>{certification.exam}</p>
+                <h3>{certification.title}</h3>
+                <a href={certification.link} rel="noreferrer" target="_blank">
+                  Ver en Microsoft Learn
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
       </section>
 
       <section className="auth-workspace" aria-label="Panel de autenticacion">
