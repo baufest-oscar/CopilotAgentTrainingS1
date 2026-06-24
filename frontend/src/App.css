@@ -99,6 +99,51 @@ h2 {
   font-weight: 700;
 }
 
+.certifications-panel {
+  margin-top: 1.5rem;
+}
+
+.certifications-title {
+  margin-bottom: 0.85rem;
+  color: #2a4740;
+  font-weight: 800;
+}
+
+.certifications-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.certification-card {
+  border: 1px solid rgba(23, 32, 29, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.9rem;
+  backdrop-filter: blur(8px);
+}
+
+.certification-card p {
+  margin: 0 0 0.4rem;
+  color: #42635b;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.certification-card h3 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.certification-card a {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: #0f6f63;
+  font-weight: 700;
+}
+
 .status-dot {
   width: 0.7rem;
   height: 0.7rem;
@@ -324,5 +369,9 @@ code {
 
   h1 {
     font-size: 3rem;
+  }
+
+  .certification-card h3 {
+    font-size: 0.95rem;
   }
 }
